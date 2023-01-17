@@ -44,7 +44,7 @@ function addemployee(Event) {
     let c5 = document.createElement("button")
     c5.innerHTML="Delete Employee"
     c5.setAttribute("id","delete")
-    
+
      row.appendChild(c1)
      row.appendChild(c2)
      row.appendChild(c3)
