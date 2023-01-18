@@ -58,15 +58,22 @@ function addemployee(Event) {
 
     arr.map(employee => {
 
-     return c1.innerText = employee.id, c2.innerText = employee.name, c3.innerText = employee.profession,
+     c1.innerText = employee.id, c2.innerText = employee.name, c3.innerText = employee.profession,
          c4.innerText = employee.age
+         c5.addEventListener('click',()=>{
+             row.remove()
+            //arr.splice(arr.indexOf(employee),1)
+
                         } )
+
+                    } )
 
 //appending row with  cells value to document's tbody
 
     tablebody.appendChild(row)
 
-    }
+}
 
-//let btns = document.querySelectorAll("button")
-//btns[1].addEventListener("click",()=>{tablebody.deleteRow(arr.id)})
+    
+
+
