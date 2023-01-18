@@ -34,7 +34,12 @@ function addemployee(Event) {
 
     emploicount.innerHTML = arr.length;
 
-    // creating row with and appending cells into the row on every adduser button
+     createtable();
+    // creating row  and appending cells into the row on every adduser button
+    }
+
+    function createtable()
+    {
 
     let row = document.createElement("tr")
     let c1 = document.createElement("td")
@@ -42,8 +47,8 @@ function addemployee(Event) {
     let c3 = document.createElement("td")
     let c4 = document.createElement("td")
     let c5 = document.createElement("button")
-    c5.innerHTML="Delete Employee"
-    c5.setAttribute("id","delete")
+              c5.innerHTML="Delete Employee"
+               c5.setAttribute("id","delete")
 
      row.appendChild(c1)
      row.appendChild(c2)
@@ -53,13 +58,15 @@ function addemployee(Event) {
 
     arr.map(employee => {
 
-        return c1.innerText = employee.id, c2.innerText = employee.name, c3.innerText = employee.profession,
-            c4.innerText = employee.age
+     return c1.innerText = employee.id, c2.innerText = employee.name, c3.innerText = employee.profession,
+         c4.innerText = employee.age
                         } )
 
 //appending row with  cells value to document's tbody
 
     tablebody.appendChild(row)
 
-}
+    }
 
+//let btns = document.querySelectorAll("button")
+//btns[1].addEventListener("click",()=>{tablebody.deleteRow(arr.id)})
